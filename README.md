@@ -2,7 +2,7 @@
 
 ## Code to plot two different axis on Same Plot:
 
-fig, ax1 = plt.subplots(figsize=(22,8))
+`fig, ax1 = plt.subplots(figsize=(22,8))
 
 df2_Clean.EngineStatus.plot(title = "Engine Status",color = 'orange')
 df2_Clean['EngineStatus'].resample('1d').sum().plot(title = "EngineStatus Daily Average",  color = 'Blue')
@@ -26,8 +26,8 @@ ax2.tick_params(axis='y', labelcolor=color)
 
 fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
-# Label X-Axis
+#Label X-Axis
 plt.xlabel("Time")
 
-# Show plot
-plt.show()
+#Show plot
+plt.show()`
