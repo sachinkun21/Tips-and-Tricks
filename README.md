@@ -78,4 +78,4 @@
         
         
 ### Custom Legend 
-        plt.legend(loc = 'upper left', labels = label , facecolor= 'grey' , framealpha = 0.9, fontsize = 'large')
+        plt.legend(loc = 'upper left', labels = label , facecolor= 'grey' , framealpha = 0.5, fontsize = 'large', bbox_to_anchor = [0.8,0.1, 1, 1])
