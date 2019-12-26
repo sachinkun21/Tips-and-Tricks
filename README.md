@@ -1,4 +1,18 @@
-
+## Custom aggregate Function for Resample/ Group by:
+        # agg func
+        def hour(series):
+          per = 0
+          for i in series:
+            if i==1:
+              per+=1
+          return per*30/(60*60)
+        
+        # function call
+        df2_Clean['EngineStatus'].resample('1d').agg(hour)
+        
+        or
+        # using lambda function
+        df2_Clean['EngineStatus'].resample('1d').agg(lambda x: sum(x)*30/3600)
 
 ## Code to plot two different axis on Same Plot:
 
