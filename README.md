@@ -1,3 +1,19 @@
+## SQL With Pandas
+
+#### Where clause condition: 
+        job_code = 'LE130846' 
+        
+        # Variable foramtting
+        job_code = """'""" +job_code + """'"""
+
+
+        sql_query = ("select FrontCameraPath  FROM [WeighmentDB].[dbo].[Weighment_Detail] " +
+            " WHERE CreatedDatetime > '2019-12-23 00:00:00' "+
+            "  AND AIVehicleNo != '_NOPLATE_' " +
+            " AND ANPRInfo != ''  and jobcode = " +(job_code) )
+        sql_query
+
+
 
 ## Working with Directories
 
