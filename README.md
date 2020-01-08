@@ -19,11 +19,11 @@
 
 
 #### removing Directories
-import shutil
-try :
-    shutil.rmtree(job_code)
-    print(job_code, " Directory Already exists. Dropping and Recreating ", job_code)
- 
+        import shutil
+        try :
+            shutil.rmtree(job_code)
+            print(job_code, " Directory Already exists. Dropping and Recreating ", job_code)
+
 
 except:
     print("Creating Directory: ", job_code)
