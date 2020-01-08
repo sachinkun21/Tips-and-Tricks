@@ -1,3 +1,35 @@
+
+## Working with Directories
+
+#### Creating Directories
+        import os
+        def create_directory(job_code):
+            try:
+                os.mkdir(job_code)
+                os.mkdir(job_code+'/NoPlate/')
+                os.mkdir(job_code+'/CorrectPlate/')
+                os.mkdir(job_code+'/IncorrectPlate/')
+
+            except OSError:
+                print ("Creation of the directory %s failed!" % job_code)
+
+            else:
+                print ("Successfully created the directory %s " % job_code)
+        create_directory('LE120450')
+
+
+#### removing Directories
+import shutil
+try :
+    shutil.rmtree(job_code)
+    print(job_code, " Directory Already exists. Dropping and Recreating ", job_code)
+ 
+
+except:
+    print("Creating Directory: ", job_code)
+    extract_all_images(job_code)
+
+
 ## Custom aggregate Function for Resample/ Group by:
         # agg func
         def hour(series):
