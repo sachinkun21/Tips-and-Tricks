@@ -1,3 +1,21 @@
+### BASE64 Image crop and Extraction with bounding Box
+def getBase64(image1,bbox,img_string):
+
+    im = Image.open(BytesIO(image1)).convert('RGB')
+    np_image = np.array(im)
+
+    # Convert RGB to BGR
+    crop_img = np_image[ bbox[3] :bbox[4],bbox[1] :bbox[2]]
+    im_cr = Image.fromarray(crop_img)
+    
+    # Buffer array to store Image in memory
+    output = BytesIO()
+    saved = im_cr.save(output, format='JPEG')
+    encoded_string = base64.b64encode(output.getvalue())
+
+    return encoded_string
+
+
 ## SQL With Pandas
 
 #### Where clause condition: 
