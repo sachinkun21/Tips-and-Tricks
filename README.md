@@ -114,19 +114,19 @@ except:
 
 ### Stacked Histogram plot
 
-sns.set_style("darkgrid")
-plt.set_cmap('jet')
-plt.figure(figsize=(15, 6))
-_, bins, _ = plt.hist([machines.loc[machines['model'] == 'model1', 'age'],
-                       machines.loc[machines['model'] == 'model2', 'age'],
-                       machines.loc[machines['model'] == 'model3', 'age'],
-                       machines.loc[machines['model'] == 'model4', 'age']],
-                       20, stacked=True, label=['model1', 'model2', 'model3', 'model4'])
-plt.xlabel('Age (yrs)')
-plt.ylabel('Count')
-plt.legend()
-plt.title("Count of Each Machine in each Age Category")
-plt.show()
+    sns.set_style("darkgrid")
+    plt.set_cmap('jet')
+    plt.figure(figsize=(15, 6))
+    _, bins, _ = plt.hist([machines.loc[machines['model'] == 'model1', 'age'],
+                           machines.loc[machines['model'] == 'model2', 'age'],
+                           machines.loc[machines['model'] == 'model3', 'age'],
+                           machines.loc[machines['model'] == 'model4', 'age']],
+                           20, stacked=True, label=['model1', 'model2', 'model3', 'model4'])
+    plt.xlabel('Age (yrs)')
+    plt.ylabel('Count')
+    plt.legend()
+    plt.title("Count of Each Machine in each Age Category")
+    plt.show()
 
 ### Source Code to plot two different axis on Same Plot:
 
