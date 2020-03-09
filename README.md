@@ -38,10 +38,10 @@ def getBase64(image1,bbox,img_string):
         job_code = """'""" +job_code + """'"""
 
 
-        sql_query = ("select FrontCameraPath  FROM [WeighmentDB].[dbo].[Weighment_Detail] " +
-            " WHERE CreatedDatetime > '2019-12-23 00:00:00' "+
-            "  AND AIVehicleNo != '_NOPLATE_' " +
-            " AND ANPRInfo != ''  and jobcode = " +(job_code) )
+        sql_query = ("select ColName  FROM DBNAME " +
+            " WHERE Date > '2019-12-20 00:00:00' "+
+            "  AND Col_A != 'A' " +
+            " AND Col_B != ''  and jobcode = " +(job_code) )
         sql_query
 
 
@@ -62,7 +62,7 @@ def getBase64(image1,bbox,img_string):
 
             else:
                 print ("Successfully created the directory %s " % job_code)
-        create_directory('LE120450')
+        create_directory('MyDIR')
 
 
 #### removing Directories
