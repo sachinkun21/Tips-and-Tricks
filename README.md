@@ -1,3 +1,6 @@
+
+ urlretrieve(imagepath+key_append, file_name)
+
 ### BASE64 Image crop and Extraction with bounding Box
 def getBase64(image1,bbox,img_string):
 
