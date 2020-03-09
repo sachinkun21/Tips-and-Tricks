@@ -5,7 +5,7 @@
     from urllib.error import HTTPError
     
     try:
-        urlretrieve(imagepath+key_append, file_name)
+        urlretrieve(url, localPath)
     except FileNotFoundError as err:
           print(err)   # something wrong with local path
     except HTTPError as err:
