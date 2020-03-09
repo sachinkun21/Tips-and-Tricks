@@ -32,7 +32,7 @@ def getBase64(image1,bbox,img_string):
 ## SQL With Pandas
 
 #### Where clause condition: 
-        job_code = 'LE130846' 
+        string  = 'value'
         
         # Variable foramtting
         job_code = """'""" +job_code + """'"""
