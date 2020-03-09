@@ -2,6 +2,8 @@
 ## Download and Write Files directly from URL's into LOCAL Machine
 
     from urllib.request import urlretrieve
+    from urllib.error import HTTPError
+    
     urlretrieve(imagepath+key_append, file_name)
 
 ### BASE64 Image crop and Extraction with bounding Box
