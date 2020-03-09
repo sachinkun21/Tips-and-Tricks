@@ -4,7 +4,12 @@
     from urllib.request import urlretrieve
     from urllib.error import HTTPError
     
-    urlretrieve(imagepath+key_append, file_name)
+    try:
+        urlretrieve(imagepath+key_append, file_name)
+    except FileNotFoundError as err:
+          print(err)   # something wrong with local path
+    except HTTPError as err:
+        print(err) 
 
 ### BASE64 Image crop and Extraction with bounding Box
 def getBase64(image1,bbox,img_string):
