@@ -1,5 +1,6 @@
 
- urlretrieve(imagepath+key_append, file_name)
+## Download and Write Files directly from URL's into LOCAL Machine
+urlretrieve(imagepath+key_append, file_name)
 
 ### BASE64 Image crop and Extraction with bounding Box
 def getBase64(image1,bbox,img_string):
